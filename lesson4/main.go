@@ -54,6 +54,21 @@ func secondaryDiagonal(m [][]int) []int {
 	return result
 }
 
+func unique(s []int) []int {
+
+	var result []int
+
+	m := make(map[int]bool)
+	for _, v := range s {
+		if !m[v] {
+			m[v] = true
+			result = append(result, v)
+		}
+	}
+
+	return result
+}
+
 func main() {
 	// Задание 1. Сумма элементов массива
 	fmt.Printf("sum is %d\n", sum([...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}))
@@ -108,4 +123,9 @@ func main() {
 
 	fmt.Println("secondaryDiagonal() result is:", secondaryDiagonal(matrix))
 	// secondaryDiagonal() result is: [2 2 2]
+
+	// Задание 5. Удаление дубликатов из слайса
+	s := []int{1, 2, 2, 3, 1, 4, 3}
+	fmt.Println("Было:", s, "; Стало:", unique(s))
+	// Было: [1 2 2 3 1 4 3] ; Стало: [1 2 3 4]
 }
