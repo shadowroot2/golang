@@ -7,7 +7,6 @@ import (
 
 func CountInts(nums []int) map[int]int {
 
-	// implement me
 	m := make(map[int]int)
 	for _, n := range nums {
 		m[n]++
@@ -121,7 +120,8 @@ func main() {
 		"d": 4,
 		"a": 5,
 	}
-	fmt.Println("Слияние мапы\n", m1, "\nc мапой\n", m2, "\nРезультат:", MergeMaps(m1, m2))
+	fmt.Println("Слияние мапы\n", m1, "\nc мапой\n", m2)
+	fmt.Println("Результат:", MergeMaps(m1, m2))
 
 	// 6 Сгруппировать всех юзеров по городу
 	u1 := newUser("Федя", "Алматы")
