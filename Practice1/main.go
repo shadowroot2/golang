@@ -120,8 +120,7 @@ func main() {
 		"d": 4,
 		"a": 5,
 	}
-	fmt.Println("Слияние мапы\n", m1, "\nc мапой\n", m2)
-	fmt.Println("Результат:", MergeMaps(m1, m2))
+	fmt.Println("Слияние мапы\n", m1, "\nc мапой\n", m2, "Результат:", MergeMaps(m1, m2))
 
 	// 6 Сгруппировать всех юзеров по городу
 	u1 := newUser("Федя", "Алматы")
